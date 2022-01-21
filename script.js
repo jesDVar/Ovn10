@@ -21,13 +21,31 @@ let textOutput = document.querySelector('#starWarsOutput');
 document.querySelector('#starWarsForm').addEventListener('submit', todo.addItem);
 
 
-function getApi(){
-    /*Skriv din kod här*/
-    fetch('https://www.swapi.tech/api/people/?name=' + input)
-    .then(res => res.json())
-    .then(data =>
-    {
-    /*Och här*/
-    })
-    .catch(err => console.log(err))
-    }
+// function getApi(){
+//     /*Skriv din kod här*/
+//     fetch('https://www.swapi.tech/api/people/?name=' + input)
+//     .then(res => res.json())
+//     .then(data =>
+    
+   
+//     console.log(res)
+//     console.log(result)
+//     )
+//     .catch(err => console.log('error', err));
+    
+
+
+    // fetch("https://www.swapi.tech/api/people", requestOptions)
+    // .then(response => response.text())
+    // .then(result => console.log(result))
+    // .catch(error => console.log('error', error));
+
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("https://www.swapi.tech/api/people", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
