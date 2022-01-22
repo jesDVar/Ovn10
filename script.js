@@ -1,7 +1,7 @@
 //------------TESTFIELD-------------
 
-// let btn1 = document.querySelector('#addItemBtn');
-// let textOutput = document.querySelector('#starWarsOutput');
+let btn1 = document.querySelector('#addItemBtn');
+let textOutput = document.querySelector('#starWarsOutput');
 
 
 // // btn1.addEventListener('click', function(){
@@ -14,22 +14,22 @@
 // // })
 
 
-// // ((todo) => {
-// //     todo.addItem = function(e){
-// //         e.preventDefault();
-// //         const input = this['sWUserInput'];
-// //         // console.log('hej');
-// //         // console.log(input);
-// //     }
-// //     const createSWInput = (input) => {
-// //         let li = document.createElement('li');
-// //         li.innerText = input.value;
-// //         li.classList.add('#starWarsOutput');
-// //     }
+((todo) => {
+    todo.addItem = function(e){
+        e.preventDefault();
+        const input = this['sWUserInput'];
+        console.log('hej');
+        // console.log(input);
+    }
+    const createSWInput = (input) => {
+        let li = document.createElement('li');
+        li.innerText = input.value;
+        li.classList.add('#starWarsOutput');
+    }
     
-// // })(window.todo = window.todo || {});
+})(window.todo = window.todo || {});
 
-// // document.querySelector('#starWarsForm').addEventListener('submit', todo.addItem);
+document.querySelector('#starWarsForm').addEventListener('submit', todo.addItem);
 
 
 // function getApi() {
